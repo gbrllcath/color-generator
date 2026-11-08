@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <title>Color Geneator</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Color Generator</h1>
+        </header>
+        
+        <main>
+            <form id="picker-form" class="picker-section">
+                <input type="color" value="#CAA784" id="seed-color" aria-label="Seed color"/>
+                <select id="mode-select" aria-label="Color scheme mode">
+                    <option value="monochrome">Monochrome</option>
+                    <option value="monochrome-dark">Monochrome-dark</option>
+                    <option value="monochrome-light">Monochrome-light</option>
+                    <option value="analogic">Analogic</option>
+                    <option value="complement">Complement</option>
+                    <option value="analogic-complement">Analogic-complement</option>
+                    <option value="triad">Triad</option>
+                </select>
+                <button type="submit">Get Colors</button>
+                <button type="button" id="random-btn" aria-label="Random color">🎲</button>
+            </form>
+            
+            <section id="colors-section" class="colors-section">
+                <!-- COLORS HERE -->
+            </section>        
+        
+        </main>
+        
+        <script src="index.js"></script>
+    </body>
+</html>  

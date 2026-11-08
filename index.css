@@ -1,0 +1,124 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "DM Sans", sans-serif;
+}
+
+h1, button, p, input, form {
+    font-family: "DM Sans", sans-serif;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 6vw, 3rem);
+}
+
+header,
+form {
+    padding: 0 0.5em 0 0.5em;
+}   
+
+.picker-section {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    margin-bottom: 1em;
+    gap: 12px;
+
+}
+
+.picker-section input {
+    width: 80px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid darkgray;
+    cursor: pointer;
+}
+
+.picker-section select {
+    height: 44px;
+    border: none;
+    width: 100%;
+    min-width: 0;
+    cursor: pointer;
+    text-overflow: ellipsis;
+}
+
+.picker-section button {
+    height: 44px;
+    background-color: transparent;
+    border: 1px solid darkgray;
+    padding: 0.6em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.colors-section {
+    height: 44px;
+    flex: 1;
+    display: flex;
+}
+
+.color-swatch {
+    flex: 1;
+    min-height: 160px;
+    cursor: pointer;
+}
+
+.color-card {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.color-hex {
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    font-size: clamp(8px, 2.6vw, 16px); */
+    cursor: pointer;
+}
+
+@media (max-width: 450px) {
+
+    .picker-section {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
+    
+    .picker-section input {
+        grid-column: span 2;
+    }
+    
+    .picker-section select {
+        grid-column: span 4;
+    }
+    
+    .picker-section button[type="submit"] {
+        grid-column: span 4;
+    }
+    
+    .picker-section #random-btn {
+        grid-column: span 2;
+    }
+    
+    .picker-section input,
+    .picker-section select, 
+    .picker-section button {
+    width: 100%;
+    }
+    
+}
